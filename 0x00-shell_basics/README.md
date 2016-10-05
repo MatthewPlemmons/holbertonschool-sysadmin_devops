@@ -6,7 +6,7 @@
 - `2-bring_me_home`
 	uses the command `cd ~/` to return user to their home directory.
 - `3-listfiles`
-	uses the command `ls` to print directory contents with long listing format.
+	uses the command `ls` to print directory contents in long listing format.
 - `4-listmorefiles`
 	uses the command `ls` to print directory contents and hidden files in long format.
 - `5-listfilesdigitonly`
