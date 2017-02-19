@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # List contents of current directory
 
-for file in *; do
-    echo "${file##*-}"
-done
+for file in *; do echo "${file##*-}"; done
