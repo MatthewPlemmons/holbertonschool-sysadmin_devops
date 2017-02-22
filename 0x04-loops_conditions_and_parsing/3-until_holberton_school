@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Prints Holberton School ten times.
+
+i=0; until (( i == 10 )); do echo Holberton School; ((i++)); done
