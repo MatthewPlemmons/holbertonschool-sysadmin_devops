@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Return the PID of bash.
+
+echo $$
