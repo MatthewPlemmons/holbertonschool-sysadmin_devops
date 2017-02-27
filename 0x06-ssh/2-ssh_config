@@ -1,0 +1,6 @@
+Host myserver
+     HostName 52.90.119.193
+     User ubuntu
+     PasswordAuthentication no
+     PubKeyAuthentication yes
+     IdentityFile ~/.ssh/holberton
