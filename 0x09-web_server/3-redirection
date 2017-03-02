@@ -9,5 +9,4 @@ redirect="location /redirect_me { return 301 $url; }"
 cp /etc/nginx/sites-available/default ect/ngingx/sites-available/default.bak
 sudo sed -i "38i\\\t$redirect\n" /etc/nginx/sites-available/default
 
-echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
 sudo service nginx start
