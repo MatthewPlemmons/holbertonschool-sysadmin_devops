@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # Create a backup my mySQL database.
 
-if (( $# == 1 )); then
-    mysqldump -uroot -p"$1" --all-databases > backup.sql
-    tar -cf "$(date '+%d-%m-%Y').tar.gz" backup.sql
-fi
+mysqldump -uroot -p"$1" --all-databases > backup.sql
+tar -cf "$(date '+%d-%m-%Y').tar.gz" backup.sql
