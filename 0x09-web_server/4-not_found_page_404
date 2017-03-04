@@ -3,6 +3,6 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 
-sudo sed -i 's/#error_page /error_page/' /etc/nginx/sites-enabled/default
+sudo sed -i '43 s/#//' /etc/nginx/sites-enabled/default
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
 sudo service nginx start
