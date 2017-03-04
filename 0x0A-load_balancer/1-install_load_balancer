@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
-# nginx configuration script
+# Script to install and configure HAProxy version 1.7
+
+# enable dedicated ppa for version 1.7
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-1.7
+
+# install haproxy
 sudo apt-get update
 sudo apt-get -y install haproxy
+
+# configure haproxy
 sudo sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.bak
+sudo sed -i '$a\ \nlisten web_http 0.0.0.0:80\n \tserver 80-web-01 54.164.149.121 check\n \tserver 80-web-02 52.201.184.69 check' /etc/haproxy/haproxy.cfg
 
+sudo service haproxy restart
