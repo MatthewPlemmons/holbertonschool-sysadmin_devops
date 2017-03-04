@@ -2,7 +2,7 @@
 # Install nginx on remote server.
 sudo apt-get update
 sudo apt-get -y install nginx
-
+sudo service nginx start
 sudo sed -i '43 s/#//' /etc/nginx/sites-enabled/default
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
-sudo service nginx start
+sudo service nginx restart
