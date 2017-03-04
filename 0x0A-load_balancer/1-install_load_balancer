@@ -12,6 +12,6 @@ sudo apt-get -y install haproxy
 # configure haproxy
 sudo sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.bak
-sudo sed -i '$a\ \nlisten web_http 0.0.0.0:80\n \tserver 80-web-01 54.164.149.121 check\n \tserver 80-web-02 52.201.184.69 check' /etc/haproxy/haproxy.cfg
+sudo sed -i '$a\ \nlisten web_http 0.0.0.0:80\n \tserver 80-web-01 54.164.149.121:80 check\n \tserver 80-web-02 52.201.184.69:80 check' /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
