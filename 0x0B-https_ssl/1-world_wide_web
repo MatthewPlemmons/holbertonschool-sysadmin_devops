@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 # Display information about subdomains.
-
 subdomains=("www" "lb-01" "web-01" "web-02")
-
 print_str () {
     dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk -v sdom="$2" "/$2/"'{print "The subdomain " sdom " is a " $4 " record and points to " $5}'
-    }
-
+}
 if [[ "$2" ]]; then print_str $1 $2; exit 0; fi
 if [[ "$1" ]]; then for n in "${subdomains[@]}"; do print_str $1 $n; done; exit 0; fi
 exit 1;
