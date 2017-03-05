@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Dispay IPv4 addresses.
+ifconfig | grep 'inet addr:' | awk {'print $2'} | sed -e 's/addr://'
