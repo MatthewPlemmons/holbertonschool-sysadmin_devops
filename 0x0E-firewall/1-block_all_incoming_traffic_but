@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+# Install and configure firewall
 sudo apt-get install ufw
 sudo ufw default deny incoming
 sudo ufw allow 22
