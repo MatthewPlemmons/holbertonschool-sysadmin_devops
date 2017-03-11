@@ -2,8 +2,8 @@
 # Change user of nginx.
 
 useradd nginx
-groupadd nginx
 sed -i 's/www-data/nginx/ /etc/nginx/nginx.conf
+sed -i 's/listen 80/listen 8080/' /etc/nginx/sites-available/default
+sed -i 's/listen \[::\]:80/listen \[::\]:8080/' /etc/nginx/sites-available/default
 chown nginx /usr/sbin/nginx
-chgrp nginx /usr/sbin/nginx
 service nginx restart
