@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Change user of nginx.
+
+useradd nginx
+groupadd nginx
+sed -i 's/www-data/nginx/ /etc/nginx/nginx.conf
+chown nginx /usr/sbin/nginx
+chgrp nginx /usr/sbin/nginx
+service nginx restart
