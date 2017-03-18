@@ -4,4 +4,4 @@ sed -i -e 's/listen 80/listen 8080/' -e 's/listen \[::\]:80/listen \[::\]:8080/'
 chown -R nginx /etc/nginx/
 chmod 644 /etc/nginx/nginx.conf
 pkill apache2
-su nginx -c nginx
+su nginx -c /usr/sbin/nginx
