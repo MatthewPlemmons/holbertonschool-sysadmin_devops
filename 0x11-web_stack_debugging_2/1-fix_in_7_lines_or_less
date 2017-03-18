@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Change user of nginx.
-useradd nginx
-sed -i 's/www-data/nginx/' /etc/nginx/nginx.conf
-sed -i -e 's#listen 80#listen 8080#' -e 's#listen \[::\]:80#listen \[::\]:8080#' /etc/nginx/sites-available/default
-chown nginx /usr/sbin/nginx
-service nginx restart
+sed -i 's/listen 80/listen 8080/' /etc/nginx/sites-available/default
+sed -i 's/listen \[::\]:80/listen \[::\]:8080/' /etc/nginx/sites-available/default
+chown -R nginx /etc/nginx/
+chmod 644 /etc/nginx/nginx.con
+pkill apache2
+su nginx -c nginx
