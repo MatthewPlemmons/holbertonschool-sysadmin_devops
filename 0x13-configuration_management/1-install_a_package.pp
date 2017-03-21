@@ -1,4 +1,5 @@
+# install a package
 package { 'pupper-lint':
-  ensure => 'latest',
+  ensure   => 'latest',
   provider => 'gem',
 }
