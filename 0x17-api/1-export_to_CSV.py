@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Export json data to a CSV file."""
-import sys
-import requests
 import csv
+import requests
+import sys
 
 
 if __name__ == "__main__":
