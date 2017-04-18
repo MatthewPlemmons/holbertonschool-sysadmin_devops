@@ -9,7 +9,7 @@ if __name__ == "__main__":
     r_todo = requests.get(url + '{}/todos'.format(argv[1]))
     r_user = requests.get(url + '{}'.format(argv[1]))
     json_todo = r_todo.json()
-    fin = [x for x in json_todo if x['completed'] is True]
+    fin = [x for x in json_todo if x.get('completed') is True]
     print("Employee {} is done with tasks ({}/{}):".format(
         r_user.json().get('name'), len(fin), len(json_todo)))
     for n in fin:
