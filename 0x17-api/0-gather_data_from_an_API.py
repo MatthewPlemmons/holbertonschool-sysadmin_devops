@@ -3,6 +3,7 @@
 import requests
 import sys
 
+
 if __name__ == "__main__":
     url = 'http://jsonplaceholder.typicode.com/users/'
     r_todo = requests.get(url + '{}/todos'.format(sys.argv[1])).json()
@@ -11,4 +12,4 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks({}/{}):".format(
         r_user.get('name'), len(fin), len(r_todo)))
     for n in fin:
-        print("     {}".format(n.get('title')))
+        print("\t{}".format(n.get('title')))
