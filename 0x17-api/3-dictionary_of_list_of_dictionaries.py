@@ -9,7 +9,6 @@ if __name__ == "__main__":
     todos = requests.get(url + 'todos').json()
     users = requests.get(url + 'users').json()
     data = {}
-    import pdb; pdb.set_trace()
     for user in users:
         user_id = user.get('id')
         username = user.get('username')
