@@ -13,4 +13,4 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks ({}/{}):".format(
         r_user.json().get('name'), len(fin), len(json_todo)))
     for n in fin:
-        print("\t{}".format(n['title']))
+        print("\t{}".format(n.get('title')))

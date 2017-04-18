@@ -14,4 +14,5 @@ if __name__ == "__main__":
     with open('{}.csv'.format(json_todo[0]['userId']), 'w') as f:
         w = csv.writer(f, quoting=csv.QUOTE_ALL)
         for n in json_todo:
-            w.writerow([n['userId'], username, n['completed'], n['title']])
+            w.writerow([n.get('userId'), username,
+                        n.get('completed'), n.get('title')])
