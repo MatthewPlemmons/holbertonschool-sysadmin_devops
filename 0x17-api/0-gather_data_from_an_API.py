@@ -12,4 +12,4 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks({}/{}):".format(
         r_user.get('name'), len(fin), len(r_todo)))
     for n in fin:
-        print("\t{}".format(n.get('title')))
+        print("     {}".format(n.get('title')))
